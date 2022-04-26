@@ -11,10 +11,10 @@ class Conta:
   #Caracteristicas
   __slots__ = ['_numero', '_titular', '_saldo', '_senha','extrato']
   def __init__(self, numero, cliente, saldo, senha):
-    self._senha = senha
     self._numero = numero
     self._titular = cliente
     self._saldo = saldo
+    self._senha = senha
     self.extrato = Historico()
     Conta._total_contas += 1
 
@@ -36,10 +36,11 @@ class Conta:
   def saldo(self):
     return self._saldo
 
+  @property
   def get_numero(self):
     return self._numero
 
-#  @get_numero.setter
+  @get_numero.setter #A anotação .setter funciona após a anotação @property, pois usa o nome da função get para funcionar como propriedade
   def set_numero(self, numero):
     self._numero = numero
 
