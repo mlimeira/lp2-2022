@@ -13,7 +13,7 @@ print(dir(c1))
 #Acesso indevido ao atributo privado
 #c1._saldo = 999999999
 c1.sacar(2000)
-c2.sacar(480)
+c2.sacar(1000)
 c1.extrato.imprime()
 print('===========')
 c2.extrato.imprime()

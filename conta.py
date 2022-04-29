@@ -37,11 +37,11 @@ class Conta:
     return self._saldo
 
   @property
-  def get_numero(self):
+  def numero(self):
     return self._numero
 
-  @get_numero.setter #A anotação .setter funciona após a anotação @property, pois usa o nome da função get para funcionar como propriedade
-  def set_numero(self, numero):
+  @numero.setter #A anotação .setter funciona após a anotação @property, pois usa o nome da função get para funcionar como propriedade
+  def numero(self, numero):
     self._numero = numero
 
   def get_senha(self):
